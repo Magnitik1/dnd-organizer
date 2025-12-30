@@ -1,0 +1,20 @@
+{
+    "Goblins trap": [
+        {
+            "Hobgoblin": 3
+        },
+        {
+            "Goblin": 15
+        }
+    ],
+    "Goblin teaparty": [
+        {
+            "Goblin": 4
+        }
+    ],
+    "new gruop": [
+        {
+            "Goblin": 4
+        }
+    ]
+}
