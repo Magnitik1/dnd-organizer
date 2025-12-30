@@ -36,7 +36,7 @@ export default function Notepad() {
   };
 
   return (
-    <div className="npc-detail" style={{ overflowY: 'hidden' }}> {/* Reuse npc-detail for consistent padding, border, etc. */}
+    <div className="npc-detail" style={{ overflowY: 'hidden', width: '100%', height: '100%' }}> {/* Reuse npc-detail for consistent padding, border, etc. */}
       <h1>Notepad</h1> {/* Styled via CSS: centered, accent color */}
       <div style={{ marginBottom: '2vw', display: 'flex', gap: '1vw' }}>
         <input
@@ -76,19 +76,19 @@ export default function Notepad() {
         flexWrap: 'wrap', 
         gap: '2vw',
         width: '100%', // Fill full width of npc-detail
-        paddingBottom: '1vw' // Extra padding for scrollbar space
+        paddingBottom: '5vw' // Extra padding for scrollbar space
       }}>
         {notes.map(note => (  
           <div key={note.id} style={{ 
-            flex: '1 1 30%', // Adaptive: ~3 columns on wide screens, wraps to fewer on narrow
-            minWidth: '200px', // Minimum width for small screens
+            flex: '1 1 20vw', // Adaptive: ~3 columns on wide screens, wraps to fewer on narrow
+            minWidth: '45%', // Minimum width for small screens
             border: '1px solid var(--border)', 
             borderRadius: '8px', 
             padding: '1vw', 
             backgroundColor: 'var(--bg-sidebar)',
             display: 'flex',
             flexDirection: 'column',
-            overflowY: 'hidden'
+            overflowY: 'hidden',
           }}>
             <div style={{ 
               display: 'flex', 
@@ -101,7 +101,7 @@ export default function Notepad() {
                 onClick={() => deleteNote(note.id)}
                 style={{
                   padding: '0.5vw 1vw',
-                  backgroundColor: '#dc3545',
+                  backgroundColor: 'rgba(100, 1, 1, 1)',
                   color: 'white',
                   border: 'none',
                   borderRadius: '4px',

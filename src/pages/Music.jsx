@@ -65,7 +65,7 @@ export default function Music() {
   const selectedPlaylist = playlists.find(pl => pl.id === selectedPlaylistId);
 
   return (
-    <div className="npc-detail"> {/* Reuse for consistent styling */}
+    <div className="npc-detail" style={{width:"100%",height: '100%' }}> {/* Reuse for consistent styling */}
       <h1>Music Playlists</h1>
       <div style={{ marginBottom: '2vw', display: 'flex', gap: '1vw' }}>
         <input
